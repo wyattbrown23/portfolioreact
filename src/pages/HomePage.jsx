@@ -3,6 +3,7 @@ import { Button, Layout, Table } from "antd";
 import SideBar from "../components/SideBar";
 import PageHeader from "../components/PageHeader";
 import "antd/dist/antd.css";
+import Resume from "../components/Resume"
 
 const { Header, Content } = Layout;
 
@@ -15,6 +16,7 @@ class HomePage extends React.Component {
                     <SideBar />
                     <Content>
                         <h3>Welcome To My Portfolio!</h3>
+                        <Resume />
                     </Content>
                 </Layout>
             </Layout>

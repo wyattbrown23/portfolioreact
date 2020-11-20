@@ -4,6 +4,7 @@ import Modal from "antd/lib/modal/Modal";
 import { Input, DatePicker } from "antd";
 import axios from "axios";
 import moment from "moment";
+//import {useAuth0} from '@auth0/auth0-react'
 
 class AddProjectModal extends React.Component {
     state = {
@@ -20,9 +21,19 @@ class AddProjectModal extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
+        //const { getAccessTokenSilently } = useAuth0();
+        // const accessToken = await getAccessTokenSilently( {
+        //     audience: process.env.REACT_APP_AUDIENCE
+        // });
         console.log(this.state)
         axios
-            .post(`https://myportfolio-wyattb.herokuapp.com/api/project`, this.state)
+            .post(`https://myportfolio-wyattb.herokuapp.com/api/project`, 
+            this.state)
+            // {
+            //     headers: {
+            //         Authorization: `Bearer ${accessToken}`
+            //     }
+            // })
             .then(response => {
                 console.log(response)
             })
